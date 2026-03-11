@@ -25,6 +25,7 @@ Make it executable first
 cd /path/to/jetbrains-reset-trial-evaluation-mac-master
 chmod +x runme.sh
 ```
+
 <br>
 
 Auto -
@@ -32,10 +33,14 @@ Installs a launch agent (runs every 29 days)
 ```
 ./runme.sh --agent
 ```
+
+<br>
+
 Manual - Run the scipt every 29th day
 ```
 ./runme.sh
 ```
+
 <br>
 
 Removal launch agent
