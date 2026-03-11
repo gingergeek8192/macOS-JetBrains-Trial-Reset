@@ -20,14 +20,12 @@ IntelliJ IDEA - WebStorm - DataGrip - PhpStorm - CLion - PyCharm - RubyMine - Go
 <br>
 <br>
 
-
 Make it executable first 
 ```
 cd /path/to/jetbrains-reset-trial-evaluation-mac-master
 chmod +x runme.sh
 ```
 <br>
-
 
 Auto -
 Installs a launch agent (runs every 29 days)
@@ -38,8 +36,6 @@ Manual - Run the scipt every 29th day
 ```
 ./runme.sh
 ```
-
-<br>
 <br>
 
 Removal launch agent
