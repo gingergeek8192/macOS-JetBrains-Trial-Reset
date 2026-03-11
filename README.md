@@ -1,38 +1,50 @@
-# The script resets JetBrains products trial period but keeps settings, logs and cache
+<div style="font-size: 32px;">JetBrains Trial Reset</div>
+IntelliJ IDEA - WebStorm - DataGrip - PhpStorm - CLion - PyCharm - RubyMine - GoLand - Rider
 
-Supports: Intellij IDEA, WebStorm, DataGrip, PhpStorm, CLion, PyCharm, RubyMine, GoLand and Rider
+<br>
 
-Please use it in study purpose only
+### Changes:
+- Changed launch agent to run every 29 days instead of monthly.
+- Updated launch agent job handling.
+- Made the script provide clearer messages to the user.
+- Added checks to avoid errors if folders or files don’t exist.
+- Updated paths for newer JetBrains versions.
+- Added final reboot prompt.
+<br>
 
-## Usage
-### Manually
+### Notes:
+- Both manual and auto reset will prompt to restart once trial reset is complete. You may select now or later.  
+- Please save your work before rebooting.
+- This script keeps settings, logs and cache
 
-- Close all JetBrains applications
-- For first time only:
-```shell script
+<br>
+<br>
+
+
+Make it executable first 
+```
+cd /path/to/jetbrains-reset-trial-evaluation-mac-master
 chmod +x runme.sh
 ```
-- Run script:
-```shell script
+<br>
+
+
+Auto -
+Installs a launch agent (runs every 29 days)
+```
+./runme.sh --agent
+```
+Manual - Run the scipt every 29th day
+```
 ./runme.sh
 ```
-- Reboot
 
+<br>
+<br>
 
-### Experimental: Reset evaluation automatically using launchd agent
-
-- Load job into launchctl:
-```shell script
-chmod +x runme.sh
-./runme.sh --prepare-env
+Removal launch agent
+```
+./runme.sh --rm-agent
 ```
 
-- Unload job:
-```shell script
-launchctl unload ~/Library/LaunchAgents/com.jetbrains.reset.plist 
-```
 
-Every first day of each month the job will:
-- Close all Intellij applications
-- Reset evaluation
-- Flush preference cache

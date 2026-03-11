@@ -10,10 +10,7 @@
   		  <string>-c</string>
   		  <string>exec $HOME/Scripts/jetbrains-reset.sh --launch-agent</string>
 	    </array>
-		<key>StartCalendarInterval</key> 
-		<dict> 
-		    <key>Day</key> 
-		    <integer>1</integer> 
-		</dict>
+		<key>StartInterval</key>
+		<integer>2505600</integer>
     </dict>
 </plist>
